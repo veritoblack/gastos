@@ -1,0 +1,34 @@
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { FormsModule } from '@angular/forms';
+
+import { AppComponent } from './app.component';
+import { ExpensesComponent } from './expenses/expenses.component';
+import { DatesComponent } from './dates/dates.component';
+import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap/dropdown/dropdown.module';
+import { NgbdDropdownBasic } from './widgets/ngbd-dropdown-basic/dropdown-basic';
+import {GastosHeaderComponent} from "./gastos-header/gastos-header.component";
+import {NavBarComponent} from "./nav-bar/nav-bar.component";
+
+
+//TODO los objetos de el NgModule
+@NgModule({
+  declarations: [
+    AppComponent,
+    ExpensesComponent,
+    DatesComponent,
+    NgbdDropdownBasic,
+    GastosHeaderComponent,
+    NavBarComponent
+  ],
+  imports: [
+    BrowserModule,
+    NgbModule,
+    NgbDropdownModule.forRoot(),
+    FormsModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }

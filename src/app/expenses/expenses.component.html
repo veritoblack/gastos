@@ -1,0 +1,9 @@
+<div class="expenses-component">
+  <ul class="expensas">
+    <li *ngFor="let expense of expenses" (click)="onSelect(expense)">
+     <span class="badge">{{expense.description}}</span>
+    </li>
+  </ul>
+  <!--<input [(ngModel)]="expense.currency" placeholder="Currency">-->
+  <!--<input [(ngModel)]="expense.price" placeholder="Price">-->
+</div>
