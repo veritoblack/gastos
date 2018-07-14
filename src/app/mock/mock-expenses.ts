@@ -3,47 +3,46 @@ import {Expense} from '../models/expense.model';
 export const EXPENSES : Expense[] = [
   {
     id: 1,
+    name: 'VISA',
     description: 'VISA',
-    isRecurrent: true,
     price: 1500,
     currency: '$',
-    dateFrom: null,
-    dateTo: null
+    date: null,
+    payed: false
   },
   {
     id: 2,
+    name: 'MASTERCARD',
     description: 'MASTERCARD',
-    isRecurrent: true,
     price: 500,
     currency: '$',
-    dateFrom: null,
-    dateTo: null
+    date: null,
+    payed: false
   },
   {
     id: 3,
-    description: 'Running',
-    isRecurrent: true,
+    name: 'Running',
     price: 550,
     currency: '$',
-    dateFrom: null,
-    dateTo: null
+    date: null,
+    payed: false
   },
   {
     id: 4,
+    name: 'Expensas',
     description: 'Expensas',
-    isRecurrent: true,
     price: 3000,
     currency: '$',
-    dateFrom: null,
-    dateTo: null
+    date: null,
+    payed: false
   },
   {
     id: 5,
+    name: 'Alquiler',
     description: 'Alquiler',
-    isRecurrent: true,
     price: 9700,
     currency: '$',
-    dateFrom: null,
-    dateTo: null
+    date: null,
+    payed: false
   },
 ];

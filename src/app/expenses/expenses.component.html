@@ -1,9 +1,18 @@
 <div class="expenses-component">
-  <ul class="expensas">
-    <li *ngFor="let expense of expenses" (click)="onSelect(expense)">
-     <span class="badge">{{expense.description}}</span>
-    </li>
-  </ul>
-  <!--<input [(ngModel)]="expense.currency" placeholder="Currency">-->
-  <!--<input [(ngModel)]="expense.price" placeholder="Price">-->
+    <div class="expensas">
+        <div class="expense" *ngFor="let expense of expenses" (click)="onSelect(expense)">
+            <div>{{expense.name}}</div>
+            <div>{{expense.currency}} {{expense.price}}</div>
+            <div>
+                <button *ngIf="!expense.payed else alreadyPayed" type="button" class="btn btn-outline-secondary mr-2" (click)="pay(expense)">
+                    Pay me
+                </button>
+                <ng-template #alreadyPayed>Pagaste!
+                    <i class="far fa-check"></i>
+                    <i class="far fa-user"></i>
+                    <!--brand icon-->
+                    <i class="fab fa-github-square"></i></ng-template>
+            </div>
+        </div>
+    </div>
 </div>
