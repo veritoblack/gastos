@@ -27,8 +27,7 @@ export class ExpensesComponent implements OnInit {
 
     pay(expense:Expense):void {
         console.log("I'm paying ", expense.price);
-        // expense.payed = true;
-        //
+        expense.payed = true;
         this.ngRedux.dispatch({type: PAY, body: expense})
     }
 }

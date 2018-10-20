@@ -12,6 +12,7 @@ import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap/dropdown/dropdown.
 import { NgbdDropdownBasic } from './widgets/ngbd-dropdown-basic/dropdown-basic';
 import {GastosHeaderComponent} from "./gastos-header/gastos-header.component";
 import {NavBarComponent} from "./nav-bar/nav-bar.component";
+import { GastosFooterComponent } from './gastos-footer/gastos-footer.component';
 
 
 //TODO los objetos de el NgModule
@@ -22,7 +23,8 @@ import {NavBarComponent} from "./nav-bar/nav-bar.component";
     DatesComponent,
     NgbdDropdownBasic,
     GastosHeaderComponent,
-    NavBarComponent
+    NavBarComponent,
+    GastosFooterComponent
   ],
   imports: [
     BrowserModule,

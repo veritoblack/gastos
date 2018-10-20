@@ -11,5 +11,8 @@ export class GastosHeaderComponent {
   constructor() {
   }
 
+  openMenu() :void {
+    console.log('openMenu')
+  }
 
 }
