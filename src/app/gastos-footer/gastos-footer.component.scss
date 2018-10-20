@@ -1,0 +1,18 @@
+.app-gastos-footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 16px;
+    background: lightblue;
+    color: blue;
+    border-top: 1px solid blue;
+    .footer-salary {
+        display: flex;
+        justify-content: space-between;
+    }
+    .footer-money-per-day {
+        display: flex;
+        justify-content: space-between;
+    }
+
+}
