@@ -28,6 +28,7 @@ export class ExpensesComponent implements OnInit {
     pay(expense:Expense):void {
         console.log("I'm paying ", expense.price);
         expense.payed = true;
+        // TODO Calculate plata que queda - item
         this.ngRedux.dispatch({type: PAY, body: expense})
     }
 }

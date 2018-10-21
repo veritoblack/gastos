@@ -6,7 +6,7 @@ exports.EXPENSES = [
         description: 'VISA',
         price: 1500,
         currency: '$',
-        date: null,
+        date: new Date(),
         payed: false
     },
     {
@@ -15,33 +15,33 @@ exports.EXPENSES = [
         description: 'MASTERCARD',
         price: 500,
         currency: '$',
-        date: null,
+        date: new Date(),
         payed: false
     },
     {
         id: 3,
         name: 'Running',
-        price: 550,
+        price: 700,
         currency: '$',
-        date: null,
+        date: new Date(),
         payed: false
     },
     {
         id: 4,
         name: 'Expensas',
         description: 'Expensas',
-        price: 3000,
+        price: 4300,
         currency: '$',
-        date: null,
+        date: new Date(),
         payed: false
     },
     {
         id: 5,
         name: 'Alquiler',
         description: 'Alquiler',
-        price: 9700,
+        price: 10900,
         currency: '$',
-        date: null,
+        date: new Date(),
         payed: false
     },
 ];

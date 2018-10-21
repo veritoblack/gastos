@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MONEY } from '../mock/mock-money';
 
 @Component({
   selector: 'app-footer',
@@ -8,6 +9,8 @@ import { Component, OnInit } from '@angular/core';
 export class GastosFooterComponent implements OnInit {
 
   constructor() { }
+
+  money = MONEY[1];
 
   ngOnInit() {
   }

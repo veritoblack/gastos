@@ -1,3 +1,17 @@
 <div class="dates">
-    <ngbd-dropdown-basic></ngbd-dropdown-basic>
+    <div class="row">
+        <div class="col">
+            <label for="typeahead-month">Month:</label>
+            <input id="typeahead-month" type="text" class="form-control" [(ngModel)]="month" [ngbTypeahead]="searchMonth" [resultFormatter]="formatter" />
+        </div>
+        <div class="col">
+            <label for="typeahead-year">Year:</label>
+            <input id="typeahead-year" type="text" class="form-control" [(ngModel)]="year" [ngbTypeahead]="searchYear" [resultFormatter]="formatter" />
+        </div>
+    </div>
+    <div class="row button-search">
+        <div class="col">
+            <button class="btn btn-success" (click)="onClick()">Search!</button>
+        </div>
+    </div>
 </div>
