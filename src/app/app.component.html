@@ -9,7 +9,7 @@
   <app-header (showSideBar)="onShowSideBar($event)"></app-header>
   <app-sidebar *ngIf="showMenu"></app-sidebar>
   <app-dates></app-dates>
-  <app-expenses></app-expenses>
-  <app-footer></app-footer>
+  <app-expenses (payItem)="onPaidItem($event)"></app-expenses>
+  <app-footer [money]="money"></app-footer>
 </div>
 

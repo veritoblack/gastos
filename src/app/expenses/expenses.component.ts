@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, Output, EventEmitter} from '@angular/core';
 import {NgRedux} from 'ng2-redux';
 import {Expense} from '../models/expense.model';
 import {EXPENSES} from '../mock/mock-expenses';
@@ -13,21 +13,22 @@ import {PAY} from '../actions';
 
 export class ExpensesComponent implements OnInit {
     expenses = EXPENSES;
+    @Output() payItem = new EventEmitter<number>();
 
-    constructor(private ngRedux:NgRedux<IAppState>) {
+    constructor(private ngRedux: NgRedux<IAppState>) {
     }
 
     ngOnInit() {
     }
 
-    onSelect(expense:Expense): void {
+    onSelect(expense: Expense): void {
         console.log(expense);
     }
 
-    pay(expense:Expense): void {
-        console.log('I"m paying ', expense.price);
-        expense.payed = true;
+    pay(expense: Expense): void {
+        expense.paid = true;
         // TODO Calculate plata que queda - item
+        this.payItem.emit(expense.price);
         this.ngRedux.dispatch({type: PAY, body: expense});
     }
 }

@@ -20,7 +20,7 @@ var ExpensesComponent = (function () {
     };
     ExpensesComponent.prototype.pay = function (expense) {
         console.log("I'm paying ", expense.price);
-        // expense.payed = true;
+        // expense.paid = true;
         //
         this.ngRedux.dispatch({ type: actions_1.PAY, body: expense });
     };

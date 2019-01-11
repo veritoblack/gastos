@@ -6,14 +6,14 @@ export class Expense {
   currency: string;
   paymentMethod?: PaymentMethod;
   date: Date;
-  payed: boolean;
+  paid: boolean;
 }
 
 export class Recurrent extends Expense {
 
 }
 
-export class Casual extends Expense{
+export class Casual extends Expense {
   dateFrom: Date;
   dateTo: Date;
 }

@@ -5,44 +5,44 @@ export const EXPENSES: Expense[] = [
     id: 1,
     name: 'VISA',
     description: 'VISA',
-    price: 1500,
+    price: 8500,
     currency: '$',
     date: null,
-    payed: false
+    paid: false
   },
   {
     id: 2,
     name: 'MASTERCARD',
     description: 'MASTERCARD',
-    price: 500,
+    price: 1500,
     currency: '$',
     date: null,
-    payed: false
+    paid: false
   },
   {
     id: 3,
     name: 'Running',
-    price: 550,
+    price: 700,
     currency: '$',
     date: null,
-    payed: false
+    paid: false
   },
   {
     id: 4,
     name: 'Expensas',
     description: 'Expensas',
-    price: 3000,
+    price: 4300,
     currency: '$',
     date: null,
-    payed: false
+    paid: false
   },
   {
     id: 5,
     name: 'Alquiler',
     description: 'Alquiler',
-    price: 9700,
+    price: 11000,
     currency: '$',
     date: null,
-    payed: false
+    paid: false
   },
 ];

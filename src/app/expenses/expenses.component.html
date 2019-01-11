@@ -4,7 +4,7 @@
             <div>{{expense.name}}</div>
             <div>{{expense.currency}} {{expense.price}}</div>
             <div>
-                <button *ngIf="!expense.payed else alreadyPayed" type="button" class="btn btn-outline-secondary mr-2" (click)="pay(expense)">
+                <button *ngIf="!expense.paid else alreadyPayed" type="button" class="btn btn-outline-secondary mr-2" (click)="pay(expense)">
                     Pay me
                 </button>
                 <ng-template #alreadyPayed>Pagaste!

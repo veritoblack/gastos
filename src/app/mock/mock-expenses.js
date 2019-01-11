@@ -7,7 +7,7 @@ exports.EXPENSES = [
         price: 1500,
         currency: '$',
         date: new Date(),
-        payed: false
+        paid: false
     },
     {
         id: 2,
@@ -16,7 +16,7 @@ exports.EXPENSES = [
         price: 500,
         currency: '$',
         date: new Date(),
-        payed: false
+        paid: false
     },
     {
         id: 3,
@@ -24,7 +24,7 @@ exports.EXPENSES = [
         price: 700,
         currency: '$',
         date: new Date(),
-        payed: false
+        paid: false
     },
     {
         id: 4,
@@ -33,7 +33,7 @@ exports.EXPENSES = [
         price: 4300,
         currency: '$',
         date: new Date(),
-        payed: false
+        paid: false
     },
     {
         id: 5,
@@ -42,7 +42,7 @@ exports.EXPENSES = [
         price: 10900,
         currency: '$',
         date: new Date(),
-        payed: false
+        paid: false
     },
 ];
 //# sourceMappingURL=mock-expenses.js.map

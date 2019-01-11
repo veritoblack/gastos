@@ -2,7 +2,7 @@
 var actions_1 = require('./actions');
 function rootReducer(state, action) {
     console.log(action);
-    //TODO Check here how can I return the other object with property payed if true
+    //TODO Check here how can I return the other object with property paid if true
     switch (action.type) {
         case actions_1.PAY: return;
     }

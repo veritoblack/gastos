@@ -1,6 +1,7 @@
 export class Money {
     month: number;
     salary: number;
-    perday: number;
+    // perday: number;
     year: number;
+    currentMoney: number;
 }
