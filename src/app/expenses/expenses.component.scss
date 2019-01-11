@@ -9,6 +9,7 @@
   //width: 15em;
 }
 .expense {
+  width: 100%;
   cursor: pointer;
   position: relative;
   left: 0;
@@ -16,6 +17,17 @@
   display: flex;
   justify-content: space-between;
   margin: 10px 0;
+  .expense-name{
+    width: 50%;
+  }
+  .expense-money{
+    width: 25%;
+    text-align:right;
+  }
+  .expense-button{
+    width: 25%;
+    text-align:right;
+  }
 }
 .expensas .text {
   position: relative;

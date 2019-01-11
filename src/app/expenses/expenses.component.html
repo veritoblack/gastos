@@ -1,13 +1,13 @@
 <div class="expenses-component">
     <div class="expensas">
         <div class="expense" *ngFor="let expense of expenses" (click)="onSelect(expense)">
-            <div>{{expense.name}}</div>
-            <div>{{expense.currency}} {{expense.price}}</div>
-            <div>
-                <button *ngIf="!expense.paid else alreadyPayed" type="button" class="btn btn-outline-secondary mr-2" (click)="pay(expense)">
+            <div class="expense-name">{{expense.name}}</div>
+            <div class="expense-money">{{expense.currency}} {{expense.price}}</div>
+            <div class="expense-button">
+                <button *ngIf="!expense.paid else alreadyPaid" type="button" class="btn btn-outline-secondary mr-2" (click)="pay(expense)">
                     Pay me
                 </button>
-                <ng-template #alreadyPayed>Pagaste!
+                <ng-template #alreadyPaid>Pagaste!
                     <i class="far fa-check"></i>
                     <i class="far fa-user"></i>
                     <i class="fab fa-github-square"></i>
