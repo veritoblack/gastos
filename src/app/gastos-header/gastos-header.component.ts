@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, EventEmitter, Output} from '@angular/core';
 import {NgbTypeahead} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
@@ -8,12 +8,15 @@ import {NgbTypeahead} from '@ng-bootstrap/ng-bootstrap';
 })
 
 export class GastosHeaderComponent {
+  showMenu: boolean;
+  @Output() showSideBar = new EventEmitter<boolean>();
 
   constructor() {
   }
 
-  openMenu() :void {
-    console.log('openMenu')
+  toggleMenu(): void {
+    this.showMenu = !this.showMenu;
+    this.showSideBar.emit(this.showMenu);
   }
 
 }

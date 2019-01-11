@@ -1,0 +1,7 @@
+<div class="gastos-sidebar">
+  <div *ngFor="let option of options"
+        (click)="onClick(option.id)"
+        class="sidebar-option">
+    {{option.name}}
+  </div>
+</div>

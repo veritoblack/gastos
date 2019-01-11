@@ -1,6 +1,6 @@
 import {Expense} from '../models/expense.model';
 
-export const EXPENSES : Expense[] = [
+export const EXPENSES: Expense[] = [
   {
     id: 1,
     name: 'VISA',

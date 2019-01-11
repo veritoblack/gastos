@@ -6,7 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'Gastos App!';
+  title: string;
+  showMenu: boolean;
+
+  onShowSideBar(showMenu: boolean) {
+    this.showMenu = showMenu;
+  }
+
 
 
 }

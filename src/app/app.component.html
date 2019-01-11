@@ -6,7 +6,8 @@
 
 
 <div id="wrap-centered">
-  <app-header></app-header>
+  <app-header (showSideBar)="onShowSideBar($event)"></app-header>
+  <app-sidebar *ngIf="showMenu"></app-sidebar>
   <app-dates></app-dates>
   <app-expenses></app-expenses>
   <app-footer></app-footer>

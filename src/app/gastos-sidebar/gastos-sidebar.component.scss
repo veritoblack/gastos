@@ -1,0 +1,21 @@
+.gastos-sidebar {
+  height: 100vh;
+  position: absolute;
+  z-index: 1;
+  background: rebeccapurple;
+  color: white;
+  width: 25%;
+  padding: 10px 0;
+  @media (max-width: 600px) {
+    width: 50%;
+  }
+
+  .sidebar-option {
+    padding: 5px 10px;
+    cursor: pointer;
+    &:hover {
+      color: rebeccapurple;
+      background-color: white;
+    }
+  }
+}

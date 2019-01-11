@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import {Observable} from 'rxjs';
+import {Component, OnInit} from '@angular/core';
+import { Observable } from 'rxjs/Observable';
 import {debounceTime, distinctUntilChanged, map} from 'rxjs/operators';
 
 const months = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo'];
@@ -12,11 +12,12 @@ const years = ['2019', '2018', '2017'];
 })
 export class DatesComponent implements OnInit {
   public model: any;
+  public month: number;
+  public year: number;
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   formatter = (result: string) => result.toUpperCase();
 
@@ -24,19 +25,29 @@ export class DatesComponent implements OnInit {
     text$.pipe(
       debounceTime(200),
       distinctUntilChanged(),
-      map(term => term === '' ? []
-        : months.filter(v => v.toLowerCase().indexOf(term.toLowerCase()) > -1).slice(0, 10))
+      map(term =>
+        term === ''
+          ? []
+          : months
+              .filter(v => v.toLowerCase().indexOf(term.toLowerCase()) > -1)
+              .slice(0, 10)
+      )
     )
 
   searchYear = (text$: Observable<string>) =>
     text$.pipe(
       debounceTime(200),
       distinctUntilChanged(),
-      map(term => term === '' ? []
-        : years.filter(v => v.toLowerCase().indexOf(term.toLowerCase()) > -1).slice(0, 10))
+      map(term =>
+        term === ''
+          ? []
+          : years
+              .filter(v => v.toLowerCase().indexOf(term.toLowerCase()) > -1)
+              .slice(0, 10)
+      )
     )
 
-    onClick() {
-      console.log('onClick')
-    }
+  onClick() {
+    console.log('onClick');
+  }
 }
