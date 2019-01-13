@@ -1,8 +1,14 @@
 <div class="dates">
     <div class="row">
         <div class="col">
-            <label for="typeahead-month">Month and Year (mm/yyyy):</label>
-            <input id="typeahead-month" type="text" class="form-control" [(ngModel)]="month" [ngbTypeahead]="search"  [resultFormatter]="formatter" />
+            <label for="typeahead-month">Month and Year:</label>
+            <ng-template #rt let-r="result" let-t="term">
+                <ngb-highlight [result]="r.name" [term]="t"></ngb-highlight>
+            </ng-template>
+            <input id="typeahead-template" type="text" class="form-control"
+                    [(ngModel)]="month" [ngbTypeahead]="search"
+                    [resultTemplate]="rt"
+                    [inputFormatter]="formatter" />
         </div>
     </div>
     <div class="row button-search">

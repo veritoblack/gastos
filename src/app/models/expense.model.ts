@@ -5,7 +5,8 @@ export class Expense {
   price: number;
   currency: string;
   paymentMethod?: PaymentMethod;
-  date: Date;
+  // date: Date;
+  idDate: number;
   paid: boolean;
 }
 

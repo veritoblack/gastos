@@ -1,18 +1,21 @@
 <div class="expenses-component">
     <div class="expensas">
-        <div class="expense" *ngFor="let expense of expenses" (click)="onSelect(expense)">
-            <div class="expense-name">{{expense.name}}</div>
-            <div class="expense-money">{{expense.currency}} {{expense.price}}</div>
-            <div class="expense-button">
-                <button *ngIf="!expense.paid else alreadyPaid" type="button" class="btn btn-outline-secondary mr-2" (click)="pay(expense)">
-                    Pay me
-                </button>
-                <ng-template #alreadyPaid>Pagaste!
-                    <i class="far fa-check"></i>
-                    <i class="far fa-user"></i>
-                    <i class="fab fa-github-square"></i>
-                </ng-template>
-            </div>
+        <div class="expense" *ngFor="let expense of expenses"
+        (click)="onSelect(expense)">
+          <ng-container *ngIf="filter === expense.idDate">
+              <div class="expense-name">{{expense.name}}</div>
+              <div class="expense-money">{{expense.currency}} {{expense.price}}</div>
+              <div class="expense-button">
+                  <button *ngIf="!expense.paid else alreadyPaid" type="button" class="btn btn-outline-secondary mr-2" (click)="pay(expense)">
+                      Pay me
+                  </button>
+                  <ng-template #alreadyPaid>Pagaste!
+                      <i class="far fa-check"></i>
+                      <i class="far fa-user"></i>
+                      <i class="fab fa-github-square"></i>
+                  </ng-template>
+              </div>
+          </ng-container>
         </div>
     </div>
 </div>

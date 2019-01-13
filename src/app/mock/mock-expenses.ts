@@ -7,7 +7,7 @@ export const EXPENSES: Expense[] = [
     description: 'VISA',
     price: 8500,
     currency: '$',
-    date: null,
+    idDate: 0,
     paid: false
   },
   {
@@ -16,7 +16,7 @@ export const EXPENSES: Expense[] = [
     description: 'MASTERCARD',
     price: 1500,
     currency: '$',
-    date: null,
+    idDate: 0,
     paid: false
   },
   {
@@ -24,7 +24,7 @@ export const EXPENSES: Expense[] = [
     name: 'Running',
     price: 700,
     currency: '$',
-    date: null,
+    idDate: 0,
     paid: false
   },
   {
@@ -33,7 +33,7 @@ export const EXPENSES: Expense[] = [
     description: 'Expensas',
     price: 4300,
     currency: '$',
-    date: null,
+    idDate: 0,
     paid: false
   },
   {
@@ -42,7 +42,16 @@ export const EXPENSES: Expense[] = [
     description: 'Alquiler',
     price: 11000,
     currency: '$',
-    date: null,
+    idDate: 1,
+    paid: false
+  },
+  {
+    id: 6,
+    name: 'Alquiler',
+    description: 'Alquiler',
+    price: 9700,
+    currency: '$',
+    idDate: 0,
     paid: false
   },
 ];

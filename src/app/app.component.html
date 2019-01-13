@@ -8,8 +8,8 @@
 <div id="wrap-centered">
   <app-header (showSideBar)="onShowSideBar($event)"></app-header>
   <app-sidebar *ngIf="showMenu"></app-sidebar>
-  <app-dates></app-dates>
-  <app-expenses (payItem)="onPaidItem($event)"></app-expenses>
+  <app-dates (filterExpenses)="onFilterExpenses($event)"></app-dates>
+  <app-expenses (payItem)="onPaidItem($event)" [filter]="filter"></app-expenses>
   <app-footer [money]="money"></app-footer>
 </div>
 

@@ -1,9 +1,9 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, Output, EventEmitter} from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import {debounceTime, distinctUntilChanged, map} from 'rxjs/operators';
+import { DATEEXPENSES } from '../mock/mock-date-expenses';
 
-const months = ['Enero 2019', 'Diciembre 2018', 'Noviembre 2018', 'Octubre 2018', 'Septiembre 2018'];
-// const years = ['2019', '2018', '2017'];
+const months = DATEEXPENSES;
 
 @Component({
   selector: 'app-dates',
@@ -11,43 +11,29 @@ const months = ['Enero 2019', 'Diciembre 2018', 'Noviembre 2018', 'Octubre 2018'
   styleUrls: ['./dates.component.scss']
 })
 export class DatesComponent implements OnInit {
-  public model: any;
-  public month: number;
-  public year: number;
+  model: any;
+  month: string;
+  @Output() filterExpenses = new EventEmitter<boolean>();
 
   constructor() {}
 
   ngOnInit() {}
 
-  formatter = (result: string) => result.toUpperCase();
+  formatter = (x: {dateString: string}) => x.dateString;
+
 
   search = (text$: Observable<string>) =>
     text$.pipe(
       debounceTime(200),
       distinctUntilChanged(),
-      map(term =>
-        term === ''
-          ? []
-          : months
-              .filter(v => v.toLowerCase().indexOf(term.toLowerCase()) > -1)
-              .slice(0, 10)
-      )
+      map(term => term === '' ? []
+        : months.filter(v => v.dateString.toLowerCase().indexOf(term.toLowerCase()) > -1).slice(0, 10))
     )
 
-  // searchYear = (text$: Observable<string>) =>
-  //   text$.pipe(
-  //     debounceTime(200),
-  //     distinctUntilChanged(),
-  //     map(term =>
-  //       term === ''
-  //         ? []
-  //         : years
-  //             .filter(v => v.toLowerCase().indexOf(term.toLowerCase()) > -1)
-  //             .slice(0, 10)
-  //     )
-  //   )
-
   onClick() {
-    console.log('onClick');
+    if (typeof this.month === 'object') {
+      // console.log(this.month);
+      this.filterExpenses.emit(this.month);
+    }
   }
 }

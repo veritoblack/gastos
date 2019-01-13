@@ -1,4 +1,4 @@
-import {Component, OnInit, Output, EventEmitter} from '@angular/core';
+import {Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 import {NgRedux} from 'ng2-redux';
 import {Expense} from '../models/expense.model';
 import {EXPENSES} from '../mock/mock-expenses';
@@ -13,6 +13,7 @@ import {PAY} from '../actions';
 
 export class ExpensesComponent implements OnInit {
     expenses = EXPENSES;
+    @Input() filter: number;
     @Output() payItem = new EventEmitter<number>();
 
     constructor(private ngRedux: NgRedux<IAppState>) {

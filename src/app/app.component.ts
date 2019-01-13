@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MONEY } from './mock/mock-money';
 import { Money } from './models/money.model';
+import { DateExpense } from './models/date-expense.model';
 
 @Component({
   selector: 'app-root',
@@ -10,6 +11,7 @@ import { Money } from './models/money.model';
 export class AppComponent implements OnInit {
   title: string;
   showMenu: boolean;
+  filter: number;
   money: Money;
 
   ngOnInit() {
@@ -23,6 +25,11 @@ export class AppComponent implements OnInit {
   onPaidItem(money: number) {
     console.log('pague', money);
     this.money.currentMoney -= money;
+  }
+
+  onFilterExpenses(date: DateExpense) {
+    this.filter = date.id;
+    // TODO in the futuro the filter will be implement in the BE
   }
 
 
