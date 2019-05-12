@@ -1,6 +1,6 @@
 <div class="gastos-sidebar">
   <div *ngFor="let option of options"
-        (click)="onClick(option.id)"
+        (click)="navigate(option.route)"
         class="sidebar-option">
     {{option.name}}
   </div>

@@ -5,12 +5,12 @@ export class UtilsService {
 
   constructor() { }
 
-  getSideBarOptions(): { id: number, name: string }[] {
+  getSideBarOptions(): { route: string, name: string }[] {
     return [
-      { id: 0, name: 'Ver gastos'},
-      { id: 1, name: 'Agregar gasto'},
-      { id: 2, name: 'Reportes'},
-      { id: 3, name: 'Actualizar datos'}
+      { route: '', name: 'Ver gastos'},
+      { route: 'new', name: 'Agregar gasto'},
+      { route: 'reports', name: 'Reportes'},
+      { route: 'data', name: 'Actualizar datos'}
     ];
   }
 

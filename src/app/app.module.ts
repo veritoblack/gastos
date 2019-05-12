@@ -15,6 +15,11 @@ import { GastosFooterComponent } from './gastos-footer/gastos-footer.component';
 import { GastosSidebarComponent } from './gastos-sidebar/gastos-sidebar.component';
 
 import { UtilsService } from './services/utils.service';
+import { NewExpenseComponent } from './new-expense/new-expense.component';
+import { AppRoutingModule } from './/app-routing.module';
+import { ReportsComponent } from './reports/reports.component';
+import { DataComponent } from './data/data.component';
+import { MainViewComponent } from './main-view/main-view.component';
 
 // TODO los objetos de el NgModule
 @NgModule({
@@ -25,14 +30,19 @@ import { UtilsService } from './services/utils.service';
     GastosHeaderComponent,
     NavBarComponent,
     GastosFooterComponent,
-    GastosSidebarComponent
+    GastosSidebarComponent,
+    NewExpenseComponent,
+    ReportsComponent,
+    DataComponent,
+    MainViewComponent
   ],
   imports: [
     BrowserModule,
     NgbModule,
     NgbTypeaheadModule.forRoot(),
     FormsModule,
-    NgReduxModule
+    NgReduxModule,
+    AppRoutingModule
   ],
   providers: [UtilsService],
   bootstrap: [AppComponent]

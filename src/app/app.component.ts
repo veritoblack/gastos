@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MONEY } from './mock/mock-money';
-import { Money } from './models/money.model';
-import { DateExpense } from './models/date-expense.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -11,27 +9,20 @@ import { DateExpense } from './models/date-expense.model';
 export class AppComponent implements OnInit {
   title: string;
   showMenu: boolean;
-  filter: number;
-  money: Money;
+
+  constructor(private router: Router) {
+  }
 
   ngOnInit() {
-    // TODO fijarse que sea el dia de hoy
-    this.money = MONEY[0];
   }
   onShowSideBar(showMenu: boolean) {
     this.showMenu = showMenu;
   }
 
-  onPaidItem(money: number) {
-    console.log('pague', money);
-    this.money.currentMoney -= money;
+  onRouteSelect(route: String) {
+    this.showMenu = false;
+    this.router.navigate([route]);
   }
-
-  onFilterExpenses(date: DateExpense) {
-    this.filter = date.id;
-    // TODO in the futuro the filter will be implement in the BE
-  }
-
 
 
 }
